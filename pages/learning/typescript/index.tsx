@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { ReactElement } from "react";
 import { DefaultLayout } from "../../../layouts/default";
@@ -25,7 +26,10 @@ const pages = [
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      <div className="text-4xl font-bold mb-10">Learning Typescript</div>
+      <Head>
+        <title>Learn Typescript</title>
+      </Head>
+      <div className="text-4xl font-bold mb-10">Learn Typescript</div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {pages.map((page, index) => (
           <div
