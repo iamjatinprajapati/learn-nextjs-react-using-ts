@@ -67,7 +67,7 @@ const Page: NextPageWithLayout = () => {
         <p>
           <Codeblock>{`let firstName: string | null;
 
-firstName = &quot;Jatin Prajapati&quot;;
+firstName = "Jatin Prajapati";
 
 // firstName = 1234; //Cannot set number to string variable
 
@@ -76,8 +76,8 @@ let age: number = 45;
 let hasPurchased = true;
 
 let products: string[] = [];
-products.push(&quot;Mango&quot;);
-products.push(&quot;Banana&quot;);
+products.push("Mango");
+products.push("Banana");
 
 let petCount: number[] = [];
 petCount.push(5);
@@ -85,9 +85,9 @@ petCount.push(10);
 
 console.log(firstName, age, hasPurchased, products, petCount);
 
-let productType = &quot;sports&quot;; // can be sports or homeGoods or grocery
-if (productType === &quot;sports&quot;) {
-  console.log(&apos;This product is from &quot;sports&quot; type.&apos;);
+let productType = "sports"; // can be sports or homeGoods or grocery
+if (productType === "sports") {
+  console.log('This product is from "sports" type');
 }`}</Codeblock>
         </p>
         <p className="space-y-3">
@@ -120,19 +120,16 @@ if (productType === &quot;sports&quot;) {
             another string enum member.
           </p>
           <Codeblock>{`enum Direction {
-  Up = &quot;UP&quot;,
-  Down = &quot;DOWN&quot;,
-  Left = &quot;LEFT&quot;,
-  Right = &quot;RIGHT&quot;,
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT",
 }`}</Codeblock>
         </p>
       </div>
       <div className="flex justify-end mt-3">
         <p>
-          <NextLink
-            title="Next"
-            href="/learning/typescript/02-variables-types-enums"
-          >
+          <NextLink title="Next" href="/learning/typescript/03-functions">
             <>Next</>
           </NextLink>
         </p>

@@ -16,9 +16,6 @@ const Home: NextPageWithLayout = () => {
         <BackLink href="/learning/typescript" title="Back">
           <>Back</>
         </BackLink>
-        {/* <Link href="/learning/typescript" title="Back">
-          <ArrowUturnLeftIcon className="w-5 h-5 text-indigo-500" />
-        </Link> */}
         <div className="text-4xl font-bold">01. Getting Started</div>
       </div>
       <p>
@@ -43,7 +40,7 @@ const Home: NextPageWithLayout = () => {
       </p>
       <p className="flex flex-col space-y-3 mt-3">
         <em className="font-bold">2. Defining variables</em>
-        <Codeblock>{`console.log(&quot;A valid javascript is valid typescript.&quot;);
+        <Codeblock>{`console.log("A valid javascript is valid typescript.");
 
 let x = 10;
 let y: number = 30;
@@ -54,7 +51,7 @@ class Lesson1 {
   }
 
   showSum() {
-    return &quot;The sum of \${x} + \${y} = \${this.sum}&quot;;
+    return "The sum of \${x} + \${y} = \${this.sum}";
   }
 }
 
