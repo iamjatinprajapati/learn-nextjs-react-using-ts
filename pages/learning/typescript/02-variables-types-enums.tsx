@@ -129,7 +129,10 @@ if (productType === "sports") {
       </div>
       <div className="flex justify-end mt-3">
         <p>
-          <NextLink title="Next" href="/learning/typescript/03-functions">
+          <NextLink
+            title="Next"
+            href="/learning/typescript/03-functions-and-union-types"
+          >
             <>Next</>
           </NextLink>
         </p>
