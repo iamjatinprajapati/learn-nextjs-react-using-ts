@@ -1,7 +1,20 @@
 import { ReactElement } from "react";
-const Codeblock = ({ children }: { children: ReactElement }) => {
+import CopyToClipboard from "react-copy-to-clipboard";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
+const Codeblock = ({ children }: { children: string }) => {
   return (
-    <div className={`bg-zinc-900 text-white px-2 py-3 rounded`}>{children}</div>
+    <div>
+      <SyntaxHighlighter
+        showLineNumbers="true"
+        language="javascript"
+        style={dracula}
+        className="rounded"
+      >
+        {children}
+      </SyntaxHighlighter>
+    </div>
   );
 };
 

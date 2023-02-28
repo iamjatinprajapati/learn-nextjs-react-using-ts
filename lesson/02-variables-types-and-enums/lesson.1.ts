@@ -30,6 +30,24 @@ enum ProductType {
   Groceries,
 }
 
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+}
+
+console.log(`Direction enum: ${Direction.Down}`);
+
+enum DirectionStrings {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT",
+}
+
+console.log(`DirectionStrings enum: ${DirectionStrings.Down}`);
+
 let pt = ProductType.Sports;
 if (pt === ProductType.Groceries) {
   console.log("This is grocery product");
