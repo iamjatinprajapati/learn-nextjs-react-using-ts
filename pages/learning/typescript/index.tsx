@@ -14,8 +14,8 @@ const pages = [
     href: "/learning/typescript/02-variables-types-enums",
   },
   {
-    title: "03. Functions",
-    href: "/learning/typescript/03-functions",
+    title: "03. Functions and Union Types",
+    href: "/learning/typescript/03-functions-and-union-types",
   },
   {
     title: "04. Interfaces",
@@ -42,7 +42,7 @@ const Home: NextPageWithLayout = () => {
             <div className="min-w-0 flex-1">
               <Link href={page.href} className="focus:outline-none">
                 <span className="absolute inset-0" aria-hidden="true" />
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-xl capitalize font-medium text-gray-900">
                   {page.title}
                 </p>
                 {/* <p className="truncate text-sm text-gray-500">{person.role}</p> */}
