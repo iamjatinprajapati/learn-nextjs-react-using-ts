@@ -1,13 +1,12 @@
 import { ReactElement } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 const Codeblock = ({ children }: { children: string }) => {
   return (
     <div>
       <SyntaxHighlighter
-        showLineNumbers="true"
+        showLineNumbers={true}
         language="javascript"
         style={dracula}
         className="rounded"

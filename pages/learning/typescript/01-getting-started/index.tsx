@@ -1,31 +1,12 @@
-import { ArrowUturnLeftIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import { ReactElement } from "react";
 import { DefaultLayout } from "../../../../layouts/default";
 import { NextPageWithLayout } from "../../../_app";
 import Codeblock from "@components/codeblock";
-import PrimaryLink from "@components/primarylink";
 import BackLink from "@components/backlink";
 import NextLink from "@components/nextlink";
 import Head from "next/head";
 
 const Home: NextPageWithLayout = () => {
-  const defineVariables = `console.log("A valid javascript is valid typescript.");
-
-let x = 10;
-let y: number = 30;
-class Lesson1 {
-  sum = 0;
-  constructor() {
-    this.sum = x + y;
-  }
-
-  showSum() {
-    return "The sum of \${x} + \${y} = \${this.sum}";
-  }
-}
-
-export { Lesson1 };`;
   return (
     <>
       <Head>
@@ -33,7 +14,7 @@ export { Lesson1 };`;
       </Head>
       <div className="flex flex-row space-x-3 items-center mb-10">
         <BackLink href="/learning/typescript" title="Back">
-          Back
+          <>Back</>
         </BackLink>
         {/* <Link href="/learning/typescript" title="Back">
           <ArrowUturnLeftIcon className="w-5 h-5 text-indigo-500" />
@@ -57,12 +38,12 @@ export { Lesson1 };`;
           1. Any valid JavaScript is also a valid Typescript
         </em>
         <Codeblock>
-          console.log('This is a valid JavaScript as well as Typescript');
+          {`console.log(&apos;This is a valid JavaScript as well as Typescript&apos;);`}
         </Codeblock>
       </p>
       <p className="flex flex-col space-y-3 mt-3">
         <em className="font-bold">2. Defining variables</em>
-        <Codeblock>{`console.log("A valid javascript is valid typescript.");
+        <Codeblock>{`console.log(&quot;A valid javascript is valid typescript.&quot;);
 
 let x = 10;
 let y: number = 30;
@@ -73,7 +54,7 @@ class Lesson1 {
   }
 
   showSum() {
-    return "The sum of \${x} + \${y} = \${this.sum}";
+    return &quot;The sum of \${x} + \${y} = \${this.sum}&quot;;
   }
 }
 
@@ -81,8 +62,11 @@ export { Lesson1 };`}</Codeblock>
       </p>
       <div className="flex justify-end mt-3">
         <p>
-          <NextLink href="/learning/typescript/02-variables-types-enums">
-            Next
+          <NextLink
+            title="Next"
+            href="/learning/typescript/02-variables-types-enums"
+          >
+            <>Next</>
           </NextLink>
         </p>
       </div>

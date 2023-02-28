@@ -8,7 +8,7 @@ const PrimaryLink = ({
 }: {
   href: string;
   title: string;
-  className: string;
+  className?: string;
   children: ReactElement;
 }) => {
   return (

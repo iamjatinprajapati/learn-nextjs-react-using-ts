@@ -49,7 +49,7 @@ enum DirectionStrings {
 console.log(`DirectionStrings enum: ${DirectionStrings.Down}`);
 
 let pt = ProductType.Sports;
-if (pt === ProductType.Groceries) {
+if (pt === ProductType.Sports) {
   console.log("This is grocery product");
 } else {
   console.log("OTHER PRODUCT");
