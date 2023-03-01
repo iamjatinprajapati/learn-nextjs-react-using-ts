@@ -276,7 +276,7 @@ class ClassUser {
 }`}</Codeblock>
                 </section>
                 <section className="flex flex-col space-y-3">
-                    <Heading3 className="text-base"><>Class heritage</>
+                    <Heading3><>Class heritage</>
                     </Heading3>
                     <p>Like other languages with object-oriented features, classes in JavaScript can inherit from base
                         classes.</p>
@@ -352,7 +352,7 @@ d.greet();  //prints "Hello, world!"
 d.greet("reader");  //prints "Hello, reader"`}</Codeblock>
                 </section>
                 <section className="flex flex-col space-y-3">
-                    <Heading3 className="text-base"><>Static members</>
+                    <Heading3><>Static members</>
                     </Heading3>
                     <p>Classes may have <Variablebadge text={`static`}/> members. These members aren&apos;t associated
                         with a particular instance of the class. They can be accessed through the class constructor
@@ -375,6 +375,40 @@ MyClass.printX();`}</Codeblock>
 }
 
 console.log(YourClass.x);   // Property 'x' is private and only accessible within class 'YourClass'.`}</Codeblock>
+                </section>
+                <section className="flex flex-col space-y-3">
+                    <Heading3><><Variablebadge text={`abstract`}/> Classes and Members</>
+                    </Heading3>
+                    <p>Classes, methods and fields in TypeScript may be <em>abstract</em>.</p>
+                    <p>An <em>abstract method</em> or <em>abstract field</em> is one that hasn&apos;t had an
+                        implementation provided. These members must exist inside an <em>abstract class</em>, which
+                        cannot be directly instantiated.</p>
+                    <p>The role of abstract classes is to serve as a base class for subclasses which do implement all
+                        the abstract members. When a class doesn&apos;t have any abstract members, it is said to
+                        be <em>concrete</em>.</p>
+                    <Codeblock>{`abstract class Base {
+    abstract getName(): string;
+
+    printName(): void {
+        console.log("Hello, " + this.getName());
+    }
+}
+
+class Derived extends Base {
+    getName() {
+        return "world";
+    }
+}
+
+const d = new Derived();
+d.printName();`}</Codeblock>
+                    <Quote><>We cannot instantiate an <em>abstract</em> class with <Variablebadge text={`new`}/>.</>
+                    </Quote>
+                    <p>If we forget to implement the base class&apos;s abstract members, we&apos;ll get an error:</p>
+                    <Codeblock>{`// Non-abstract class 'Derived' does not implement inherited abstract member 'getName' from class 'Base'.
+class Derived extends Base {
+    //forget to do anything
+}`}</Codeblock>
                 </section>
             </div>
         </>
