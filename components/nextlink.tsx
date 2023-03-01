@@ -16,7 +16,7 @@ const NextLink = ({
 }) => {
   return (
     <PrimaryLink href={href} title={title}>
-      <p className="flex flex-row space-x-5 items-center">
+      <p className="flex flex-row font-normal text-l space-x-5 items-center">
         {children}
         <ArrowLongRightIcon className="w-5 h-5 text-indigo-500" />
       </p>
