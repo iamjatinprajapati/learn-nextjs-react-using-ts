@@ -11,6 +11,7 @@ import Variablebadge from "@components/variablebadge";
 import Heading1 from "@components/h1";
 import Heading3 from "@components/heading3";
 import Quote from "@components/quote";
+import NextLink from "@components/nextlink";
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -227,6 +228,28 @@ printValue(false);`}</Codeblock>
   }
 }`}</Codeblock>
         </div>
+        <Quote className="font-semibold text-l">
+          <>
+            It might be confusing that a <em>union</em> of types appears to have
+            the <em>intersection</em> of those types&apos; properties. This is
+            not an accident - the name <em>union</em> comes from the type
+            theory. The union <Variablebadge text="number | string" /> is
+            composed by taking the union <em>of the values</em> from each type.
+            Notice that given two sets with corresponding facts about each set,
+            only the <em>intersection</em> of those facts applies to the{" "}
+            <em>union</em> of the sets themselves. For example, if we had a room
+            of tall people wearing hats, and another room of Spanish speakers
+            wearing hats, after combining those rooms, the only thing we know
+            about <em>every</em> person is that they must be wearing a hat.
+          </>
+        </Quote>
+      </div>
+      <div className="flex justify-end mt-3">
+        <p>
+          <NextLink title="Next" href="/learning/typescript/04-interfaces">
+            <>Next</>
+          </NextLink>
+        </p>
       </div>
     </>
   );
