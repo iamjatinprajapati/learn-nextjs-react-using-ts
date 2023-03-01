@@ -5,6 +5,7 @@ import Codeblock from "@components/codeblock";
 import BackLink from "@components/backlink";
 import NextLink from "@components/nextlink";
 import Head from "next/head";
+import Heading1 from "@components/h1";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -16,7 +17,7 @@ const Home: NextPageWithLayout = () => {
         <BackLink href="/learning/typescript" title="Back">
           <>Back</>
         </BackLink>
-        <div className="text-4xl font-bold">01. Getting Started</div>
+        <Heading1>01. Getting Started</Heading1>
       </div>
       <p>
         Typescript is a strongly types programming language that builds on
