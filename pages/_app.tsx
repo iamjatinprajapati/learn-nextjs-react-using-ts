@@ -5,6 +5,7 @@ import NextNProgress from "nextjs-progressbar";
 import "../styles/tailwind.css";
 import Head from "next/head";
 import {Andada_Pro, Fira_Code} from "@next/font/google";
+import Script from "next/script";
 
 const andadaPro = Andada_Pro({subsets: ["latin"], weight: ["400", "500"]});
 export const firaCode = Fira_Code({
@@ -28,6 +29,7 @@ export default function App({Component, pageProps}: AppPropsWithLayout) {
                       content="A demo application showcasing the basics of TypeScript, React and Next.js!"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
+                {/*<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>*/}
             </Head>
             <NextNProgress/>
             <main>
