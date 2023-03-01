@@ -24,3 +24,5 @@ class ProductOutput {
 }
 
 export { ProductOutput };
+
+
