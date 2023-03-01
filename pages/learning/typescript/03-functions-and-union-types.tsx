@@ -8,6 +8,9 @@ import function01 from "@images/01function.jpg";
 import function02 from "@images/02function.jpg";
 import Image from "next/image";
 import Variablebadge from "@components/variablebadge";
+import Heading1 from "@components/h1";
+import Heading3 from "@components/heading3";
+import Quote from "@components/quote";
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -22,11 +25,9 @@ const Page: NextPageWithLayout = () => {
         >
           <>Back</>
         </BackLink>
-        <h1 className="text-4xl font-bold">03. Functions and Union Types</h1>
+        <Heading1>03. Functions and Union Types</Heading1>
       </div>
-      <h3 className="text-2xl font-bold border-b border-zinc-200 pb-1 mb-3">
-        Functions
-      </h3>
+      <Heading3>Functions</Heading3>
       <div className="flex flex-col space-y-5">
         <div className="flex flex-col space-y-3">
           <p>
@@ -118,10 +119,47 @@ function showMessage(message: string, elementId: string = "output") {
   }
 }`}</Codeblock>
         </div>
+        <div className="flex flex-col space-y-3">
+          <p>
+            <em>Function Overloads: </em>Some JavaScript functions can be called
+            in a variety of argument counts and types. For example, you might
+            write a function to produce a <Variablebadge text="Date" /> that
+            takes either a timestampe (one argument) or a month/day/year
+            specification (three arguments).
+          </p>
+          <p>
+            In TypeScript, we can specificy a function that can be called in
+            different ways by writing <em>overload signatures.</em> The
+            following code snippet shows function signatures, followed by the
+            body of the function:
+          </p>
+          <Codeblock>{`function makeDate(timestamp: number): Date;
+function makeDate(m: number, d: number, y: number): Date;
+function makeDate(mOrTimestamp: number, d?: number, y?: number): Date {
+  if (d !== undefined && y !== undefined) {
+    return new Date(y, mOrTimestamp, d);
+  }
+  return new Date(mOrTimestamp);
+}`}</Codeblock>
+          <p>
+            If you have tried the above code, you must got confused, why the
+            function call with two paramters is not alled.
+          </p>
+          <p>
+            So, the signature used to write the function body cannot be
+            &quot;seen&quot; from the outside.
+          </p>
+          <Quote className="font-semibold text-xl">
+            <>
+              The signature of the <em>implementation</em> is not visible from
+              the outside. When writing an overload function, you should always
+              have <em>two</em> or more signatures above the implementation of
+              the function.
+            </>
+          </Quote>
+        </div>
       </div>
-      <h3 className="text-2xl font-bold border-b border-zinc-200 pb-1 mb-3 mt-5">
-        Union Types
-      </h3>
+      <Heading3 className="mt-5">Union Types</Heading3>
       <div className="flex flex-col space-y-5">
         <div className="flex flex-col space-y-3">
           <p>

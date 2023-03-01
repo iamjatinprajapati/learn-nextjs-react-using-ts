@@ -16,7 +16,7 @@ const BackLink = ({
 }) => {
   return (
     <PrimaryLink href={href} title={title}>
-      <p className="flex flex-row space-x-4 items-center">
+      <p className="flex flex-row font-normal text-l space-x-4 items-center">
         <ArrowLongLeftIcon className="w-5 h-5 text-indigo-500" />
         {children}
       </p>

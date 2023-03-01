@@ -4,7 +4,13 @@ import { ReactElement, ReactNode } from "react";
 import NextNProgress from "nextjs-progressbar";
 import "../styles/tailwind.css";
 import Head from "next/head";
+import { Andada_Pro, Fira_Code } from "@next/font/google";
 
+const andadaPro = Andada_Pro({ subsets: ["latin"], weight: ["400", "500"] });
+export const firaCode = Fira_Code({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -23,7 +29,14 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NextNProgress />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <style jsx global>{`
+        html {
+          font-family: ${firaCode.style.fontFamily};
+        }
+      `}</style>
     </>
   );
 }

@@ -6,6 +6,7 @@ import Head from "next/head";
 import Variablebadge from "@components/variablebadge";
 import BackLink from "@components/backlink";
 import NextLink from "@components/nextlink";
+import Heading1 from "@components/h1";
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -17,7 +18,7 @@ const Page: NextPageWithLayout = () => {
         <BackLink href="/learning/typescript/01-getting-started" title="Back">
           <>Back</>
         </BackLink>
-        <div className="text-4xl font-bold">02. Variables, Types and Enums</div>
+        <Heading1>02. Variables, Types and Enums</Heading1>
       </div>
       <div className="flex flex-col space-y-5">
         <p>
@@ -25,9 +26,9 @@ const Page: NextPageWithLayout = () => {
           day to day development work. We will look into those types in context
           of TypeScript.
         </p>
-        <p className="text-l">
-          <strong>The primitives:</strong> <em>string</em>, <em>number</em>, and{" "}
-          <em>boolean</em>
+        <p className="flex flex-row text-l">
+          <div className="font-semibold">The primitives:</div>&nbsp;
+          <em>string</em>, <em>number</em>, and <em>boolean</em>
         </p>
         <p>
           <ul className="m-0 p-0 list-inside list-disc space-y-3">
@@ -91,7 +92,7 @@ if (productType === "sports") {
 }`}</Codeblock>
         </p>
         <p className="space-y-3">
-          <strong>Enums</strong>
+          <div className="text-xl font-semibold">Enums</div>
           <p>
             Enums are a feature added to JavaScript by TypeScript which allows
             for describing a value which could be one of a set of possible named
