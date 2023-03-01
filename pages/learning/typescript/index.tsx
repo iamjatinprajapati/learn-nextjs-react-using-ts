@@ -21,6 +21,10 @@ const pages = [
     title: "04. Interfaces",
     href: "/learning/typescript/04-interfaces",
   },
+  {
+    title: "05. Classes",
+    href: "/learning/typescript/05-classes",
+  },
 ];
 
 const Home: NextPageWithLayout = () => {
