@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
-import { DefaultLayout } from "../../../../layouts/default";
-import { NextPageWithLayout } from "../../../_app";
+import { DefaultLayout } from "@layouts/default";
+import { NextPageWithLayout } from "pages/_app";
 import Codeblock from "@components/codeblock";
 import BackLink from "@components/backlink";
 import NextLink from "@components/nextlink";
